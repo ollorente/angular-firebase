@@ -14,10 +14,12 @@ import { CuerpoComponent } from './cuerpo/cuerpo.component';
 import { CuerpodosComponent } from './cuerpodos/cuerpodos.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { EquipoComponent } from './equipo/equipo.component';
 import { from } from 'rxjs';
 
 const routes: Routes = [
   { path: 'contacto', component: ContactoComponent },
+  { path: 'equipo/:id', component: EquipoComponent },
   { path: 'nosotros', component: NosotrosComponent },
   { path: '', component: InicioComponent, pathMatch: 'full' },
   { path: '**', redirectTo: '/', pathMatch: 'full' }
@@ -32,7 +34,8 @@ const routes: Routes = [
     CuerpoComponent,
     CuerpodosComponent,
     NosotrosComponent,
-    InicioComponent
+    InicioComponent,
+    EquipoComponent
   ],
   imports: [
     BrowserModule,
