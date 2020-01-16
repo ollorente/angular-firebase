@@ -1,13 +1,7 @@
-<h1 class="container bg-dark text-white text-center p-4 mb-4">ngIf show = {{ show }}</h1>
 <div class="container">
-  <button class="btn btn-warning" (click)="show=!show">Acción</button>
-  <button class="btn btn-dark" (cick)="activo='primero'">Primero</button>
-  <button class="btn btn-danger" (cick)="activo='segundo'">Segundo</button>
+  <app-cabecera></app-cabecera>
 
-  <p class="text-info" [ngClass]="{'d-block':activo=='primero'}" *ngIf="show; else showDos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nihil natus similique aliquid quos nam veritatis. Recusandae harum, tempore fugit esse amet optio aliquid eius accusamus repellat natus eveniet aspernatur, molestiae, voluptatum odio nesciunt veritatis velit debitis. Consectetur, sequi alias.</p>
+  <router-outlet></router-outlet>
 
-  <p class="text-danger" [ngClass]="{'d-block':activo=='segundo'}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nihil natus similique aliquid quos nam veritatis. Recusandae harum, tempore fugit esse amet optio aliquid eius accusamus repellat natus eveniet aspernatur, molestiae, voluptatum odio nesciunt veritatis velit debitis. Consectetur, sequi alias.</p>
-  <ng-template #showDos>
-    <p>Hola</p>
-  </ng-template>
+  <app-footer></app-footer>
 </div>
