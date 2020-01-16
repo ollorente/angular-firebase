@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+/* Servicios */
+import { EquipoService } from './equipo.service';
+
 import { AppComponent } from './app.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { FooterComponent } from './footer/footer.component';
@@ -11,6 +14,7 @@ import { CuerpoComponent } from './cuerpo/cuerpo.component';
 import { CuerpodosComponent } from './cuerpodos/cuerpodos.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { from } from 'rxjs';
 
 const routes: Routes = [
   { path: 'contacto', component: ContactoComponent },
@@ -34,7 +38,9 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    EquipoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,4 +3,12 @@
   <p>
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, repellendus nostrum. Rerum, minima laborum veritatis earum sit quis maxime enim, adipisci asperiores sapiente animi molestiae officiis porro doloremque quae dolores expedita deserunt distinctio iure ea atque! Dicta nulla culpa porro?
   </p>
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let item of equipo">
+    <h6>Nombre: {{ item.nombre }}</h6>
+    <h6>Especialidad: {{ item.especialidad }}</h6>
+    <a href="#">Leer más...</a>
+    </li>
+  </ul>
 </div>
